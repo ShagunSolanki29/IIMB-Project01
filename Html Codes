@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shagun Solanki | Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#about" class="nav-link">About Me</a>
+      <a href="Shagun_Solanki_Resume.pdf" class="nav-link" download>Download Resume</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero fade-in">
+    <img src="profile.jpg" alt="Shagun Solanki" class="profile-img" />
+    <h1 class="name">Shagun Solanki</h1>
+    <h3 class="subtitle">Digital Dreamer | Learning Leader | Future-Ready Entrepreneur</h3>
+    <p class="location">📍 Jaipur, Rajasthan</p>
+    <p class="contact">✉️ shagun.solanki24@iimb.ac.in OR shagunsolanki916@gmail.com | ☎️ +91-9530340997
+  </section>
+
+  <!-- RESUME CONTENT -->
+  <section class="section fade-in" id="about">
+    <div class="section-inner">
+      <p>💬 “Driven by curiosity, led by purpose — building a future in digital entrepreneurship from Jaipur to the world.”</p>
+
+      <h2>🎓 Where I’m Learning to Change the World</h2>
+      <p><strong>Bachelor of Business Administration (BBA)</strong><br>
+      Digital Business & Entrepreneurship | 2024 – 2027</p>
+      <ul>
+        <li>📍 Learning how businesses scale, how brands think, and how ideas become income.</li>
+        <li>Diving deep into digital-first business models, innovation frameworks, and startup strategy</li>
+        <li>Applying concepts from class to real-world micro-projects and leadership roles</li>
+        <li>Focused on becoming the bridge between creativity, commerce, and tech</li>
+      </ul>
+
+      <h2>🔥 What I'm Building (Even Before Graduating)</h2>
+      <p><strong>Learning Pod Leader</strong><br>
+      📅 March 2025 – Present</p>
+      <ul>
+        <li>👥 Mentoring 30+ students as part of an academic leadership pod</li>
+        <li>🧠 Leading strategy sessions, revision workshops, and subject deep-dives</li>
+        <li>🎯 Known for making complex topics feel simple and relatable — turning stress into structure</li>
+        <li>🌟 Creating an academic culture of empathy, excellence, and shared growth</li>
+      </ul>
+
+      <h2>🧠 Projects with Heart, Hustle, and HarvardX</h2>
+      <p><strong>HarvardX Learning Platform Initiative</strong><br>
+      Remote | Self-Driven | Ongoing</p>
+      <ul>
+        <li>🌍 Studying at Harvard from my dorm, digitally.</li>
+        <li>Tapping into world-class content in entrepreneurship, innovation, and digital strategy</li>
+        <li>Building a creative project portfolio that includes:</li>
+        <ul>
+          <li>🧴 Digital Retail Blueprint: A go-to-market strategy for a fictional skincare D2C brand</li>
+          <li>📱 Startup Canvas: Ideating a tech-powered hyperlocal service platform for Tier-2 towns</li>
+        </ul>
+        <li>Infusing global frameworks with Indian market insight — because local is the new global</li>
+      </ul>
+
+      <h2>⚙️ My Toolkit</h2>
+      <ul>
+        <li>🗣️ <strong>Soft Power</strong>
+          <ul>
+            <li>Active & reflective listening</li>
+            <li>Mentorship with empathy</li>
+            <li>Collaborative problem-solving</li>
+          </ul>
+        </li>
+        <li>🛠️ <strong>Tech & Tools</strong>
+          <ul>
+            <li>No-code web builders: Wix, Framer, Notion</li>
+            <li>Content editing: Adobe Lightroom, CapCut, VN Editor</li>
+            <li>Digital fluency: Design thinking, storytelling, and a sharp eye for clean UX</li>
+          </ul>
+        </li>
+        <li>🧠 <strong>Mindset</strong>
+          <ul>
+            <li>Entrepreneurial</li>
+            <li>Creative</li>
+            <li>Curious to the core</li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2>🧾 Certifications & Personal Challenges</h2>
+      <p>🎯 Goal for 2025: 50+ Certifications.<br>Learning is my lifestyle — not a checklist.</p>
+      <p>📚 Platforms I'm diving into:</p>
+      <ul>
+        <li>Google Digital Garage</li>
+        <li>Meta Blueprint</li>
+        <li>Coursera</li>
+        <li>edX</li>
+        <li>(and a few secret treasures from the internet rabbit holes 🕳️🐇)</li>
+      </ul>
+
+      <h2>🎨 A Little Bit About Me</h2>
+      <p>“A genre-wanderer on a mission to experience everything the world has to offer.”</p>
+      <ul>
+        <li>🎬 Films that make me feel</li>
+        <li>🎧 Music that moves me</li>
+        <li>⚽ Sports that challenge me</li>
+        <li>🤖 Tech that fascinates me</li>
+        <li>✍️ Journaling that grounds me</li>
+        <li>🧳 Travel that resets me</li>
+      </ul>
+
+      <h2 class="quote">✨ “Less ordinary. More original.”</h2>
+    </div>
+  </section>
+
+  <footer class="fade-in">
+    <p>&copy; 2025 Shagun Solanki. Crafted With Love.</p>
+  </footer>
+
+  <!-- SCROLL FADE-IN + NAV HIDE/SHOW -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const navbar = document.querySelector('.navbar');
+    let lastScrollY = window.scrollY;
+
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('appear');
+      });
+    }, { threshold: 0.1 });
+
+    faders.forEach(fader => observer.observe(fader));
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        navbar.classList.add('hide');
+      } else {
+        navbar.classList.remove('hide');
+      }
+      lastScrollY = window.scrollY;
+    });
+  </script>
+</body>
+</html>
+
